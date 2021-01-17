@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MySQL in wagon" uuid="89c0f752-34e5-4788-8d95-c41b65e2f5c8">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:33060/blog_local</jdbc-url>
+      <driver-properties>
+        <property name="serverTimezone" value="Asia/Taipei" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>

@@ -1,9 +1,5 @@
 <?php
 
-use App\Http\Controllers\AdminDashboardController;
-use App\Http\Controllers\AdminPostsController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,14 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::get('posts', [PostsController::class, 'index'])->name('posts.index');
-Route::get('posts/{id}', [PostsController::class, 'show'])->name('posts.show');
-
-Route::prefix('admin')->group(function () {
-    Route::get('/', [AdminDashboardController::class, 'index'])->name('admin.dashboard.index');
-
-    Route::get('posts', [AdminPostsController::class, 'index'])->name('admin.posts.index');
-    Route::get('posts/create', [AdminPostsController::class, 'create'])->name('admin.posts.create');
-    Route::get('posts/{id}/edit', [AdminPostsController::class, 'edit'])->name('admin.posts.edit');
+Route::get('/', function () {
+    return view('welcome');
 });
